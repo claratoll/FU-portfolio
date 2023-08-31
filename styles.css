@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #a987e9;
+}
+
+p {
+  max-width: 900px; /* Set the maximum width for <p> elements */
+  text-align: center;
+  margin: 0 auto; /* Center-align <p> elements within their containers */
+  padding: 10px;
+}
+
+a {
+  color: #6d2de2;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #a987e9;
+}
+
+#about {
+  background-image: url(images/desk.png);
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+  background-attachment: fixed;
+}
+
+#tabata {
+  background-image: url(images/cloud.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 100px;
+}
+
+.app-images {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.app-images img {
+  max-width: 33.33%; /* Each image takes up one-third of the container */
+  max-height: 700px;
+  width: auto;
+  margin: 0;
+  padding: 5px; /* Add some padding between images */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#github {
+  background-image: url(images/coffee.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+}
+
+@media (max-width: 600px) {
+  #about,
+  #tabata,
+  #github {
+    padding: 40px;
+    min-height: 700px;
+  }
+  .center {
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 999px) {
+  #about,
+  #tabata,
+  #github {
+    padding: 60px;
+  }
+}
+
+@media (min-width: 1000px) {
+}
