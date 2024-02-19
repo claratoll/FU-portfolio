@@ -1,31 +1,50 @@
+@charset "UTF-8";
+
 body {
   font-family: Arial, sans-serif;
   height: 100vh;
+  text-align: center;
 }
 
 h2 {
   font-size: 50px;
   margin-bottom: 10px;
-  text-align: center;
   color: #a987e9;
 }
 
 p {
   max-width: 900px; /* Set the maximum width for <p> elements */
-  text-align: center;
   margin: 0 auto; /* Center-align <p> elements within their containers */
   padding: 10px;
 }
 
 a {
   color: #6d2de2;
-  text-align: center;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
   color: #a987e9;
+}
+
+.contact_me:hover {
+  color: #a987e9;
+}
+
+.contact_me:active {
+  color: blue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 30px;
+}
+
+li {
+  display: inline;
+  padding: 30px;
 }
 
 #about {
@@ -44,6 +63,30 @@ a:hover {
   padding: 100px;
 }
 
+#github {
+  background-image: url(images/coffee.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+}
+
+#education {
+  background-image: url(images/bakgrund.png);
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+  background-attachment: fixed;
+}
+
+#contact {
+  background-image: url(images/clara.png);
+  background-size: cover;
+  background-position: center;
+  padding: 300px;
+  background-attachment: fixed;
+}
+
 .app-images {
   display: flex;
   justify-content: space-evenly;
@@ -58,33 +101,73 @@ a:hover {
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
-#github {
-  background-image: url(images/coffee.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  padding: 300px;
+/* Apply CSS to style the layout */
+#exercise {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Vertically align items */
+  justify-content: space-between;
+  height: 500px;
+}
+
+#image {
+  flex: 1; /* Allow image to grow and take available space */
+  padding-right: 20px; /* Add spacing between image and text */
+}
+
+#image img {
+  max-height: 400px; /* Set a maximum height for the image */
+  width: auto;
+}
+
+#reps,
+#rounds {
+  margin: 30px; /* Remove default margin for <p> elements */
 }
 
 @media (max-width: 600px) {
   #about,
   #tabata,
+  #contact,
+  #education,
   #github {
     padding: 40px;
-    min-height: 700px;
   }
-  .center {
-    padding: 10px 0;
+
+  #about,
+  #github {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  #exercise {
+    flex-direction: column; /* Stack items vertically */
   }
 }
 
 @media (min-width: 601px) and (max-width: 999px) {
   #about,
   #tabata,
+  #contact,
+  #education,
   #github {
     padding: 60px;
   }
 }
 
-@media (min-width: 1000px) {
+.toast {
+  display: none;
+  width: fit-content;
+  background-color: rgba(229, 93, 93, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.toast.show {
+  display: block;
 }
